@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+@{
+    ViewData["mensagem"] = "Bem vindo ao Sistema de Gerenciamento do Buffet Comida Mineira";
+}
+
+<br/>
+<center>
+    <form method="get" action="/interno/painel" style="background-color:rgb(217,251,221); text-align:left; border-style:solid; border-color:black; border-width:4px; padding:12px; width:500px;">
+        <h4 style="text-align:center;">Insira seus dados de acesso:</h4><br>
+        <div class="form-group">
+            <label style="line-height:40px;height:40px;" for="cpf">CPF:&nbsp;&nbsp;</label>
+            <input style="width:300px; float:right; position:relative; right:0%;" required type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira aqui seu CPF (apenas números)">
+        </div>
+        <div class="form-group">
+            <label style="line-height:40px; height:40px;" for="cpf">Senha:&nbsp;&nbsp;</label>
+            <input style="width:300px; float:right; position:relative; right:0%;" required type="password" class="form-control" name="senha" id="senha" placeholder="Insira aqui sua senha">
+        </div>
+        <div>
+            <label style="line-height:40px; height:40px;" for="vinculo">Tipo de vínculo:&nbsp;&nbsp;</label>
+            <select size="1" name="vinculo" id="vinculo" class="form-control" style="text-align:center; width:230px; position:relative; float:right; right:0%;">
+                <optgroup label="-- Marque a sua opção --">
+                    <option id="f" value="f">Funcionário</option>
+                    <option id="c" value="c">Cliente</option>
+                </optgroup>
+            </select><br><br>
+        </div>
+        <div style="text-align:center;">
+            <button name="idButton" value="1" type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+</center>

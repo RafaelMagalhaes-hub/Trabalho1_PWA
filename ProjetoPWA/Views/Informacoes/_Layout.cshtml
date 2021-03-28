@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/logoPWA.png" />
+    <title>@ViewData["Title"] - Buffet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+    <body style="background-color:beige;">
+        <img style="margin-top:5px; position:relative; left:50%; transform:translate(-50%,0%);" src="/img/logoPWA.png" /><br /><br />
+        <h1 style="font-family:cursive; text-align:center;font-style:italic">@ViewData["mensagem"]</h1>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" style="font-size:23px;" href="/home/index">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="font-size:23px;" href="/home/recuperacao">Recuperação de conta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="font-size:23px;" href="/home/cadastro">Cadastro</a>
+            </li>
+        </ul>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div><br />
+        <footer class="border-top footer text-muted" >
+            <div style="margin-left:10px;text-align:left;">
+                &copy; 2021 - Sistema de Gerenciamento - Buffet Comida Mineira - <a asp-controller="Informacoes" asp-action="Privacidade">Política de privacidade</a><span> - </span>
+                <a asp-controller="Informacoes" asp-action="Termos">Termos de uso</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

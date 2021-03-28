@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Recuperação";
+}
+@{
+    ViewData["mensagem"] = "Sistema de Gerenciamento do Buffet Comida Mineira";
+}
+<br />
+<center>
+    <center>
+        <form method="get" style="background-color:rgb(217,251,221); text-align:left; border-style:solid; border-color:black; border-width:4px; padding:12px; width:500px;">
+            <h4 style="text-align:center;">Insira seus dados mínimos para recuperação de acesso:</h4><br>
+            <div class="form-group">
+                <label style="line-height:40px;height:40px;" for="cpf">CPF:&nbsp;&nbsp;</label>
+                <input style="width:300px; float:right; position:relative; right:0%;" required type="text" class="form-control" name="cpf" id="cpf" placeholder="Insira aqui seu CPF (apenas números)">
+            </div>
+            <div class="form-group">
+                <label style="line-height:40px;height:40px;" for="email">E-mail:&nbsp;&nbsp;</label>
+                <input style="width:300px; float:right; position:relative; right:0%;" required type="email" class="form-control" name="email" id="email" placeholder="Insira aqui seu e-mail">
+            </div>
+            <div>
+                <label style="line-height:40px; height:40px;" for="vinculo">Tipo de vínculo:&nbsp;&nbsp;</label>
+                <select size="1" name="vinculo" id="vinculo" class="form-control" style="text-align:center; width:230px; position:relative; float:right; right:0%;">
+                    <optgroup label="-- Marque a sua opção --">
+                        <option id="f" value="f">Funcionário</option>
+                        <option id="c" value="c">Cliente</option>
+                    </optgroup>
+                </select><br><br>
+            </div>
+            <p style="font-weight:bold; font-style:italic; text-align:center;">OBS: Se os dados acima estiverem válidos, você receberá um e-mail de recuperação.</p><br />
+            <div style="text-align:center;">
+                <button name="idButton" value="1" type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </center>
+</center>
