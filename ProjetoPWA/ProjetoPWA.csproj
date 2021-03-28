@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\ViewModels\Home\" />
+    <Folder Include="Models\ViewModels\Informacoes\" />
+    <Folder Include="Models\ViewModels\Interno\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
